@@ -1,0 +1,53 @@
+<div class="module-d_blog_articles_latest module-d_blog_articles_latest-{{ module }}"{% if attr_ID %} id="{{ attr_ID }}"{% endif %}>
+    <div class="module-d_blog_articles_latest-wrap">
+        <div class="module-d_blog_articles_latest-content">
+            {% if heading_title %}
+                <h2>{{ heading_title }}</h2>
+            {% endif %}
+
+            {% if description %}
+                <div class="description">{{ description }}</div>
+            {% endif %}
+
+            <div class="d_blog_articles_latest-content">
+                <div class="articles_latest">
+                    {% for article in articles %}
+                        <div class="article_latest">
+                            <div class="article_latest-wrap">
+                                <div class="image">
+                                    {% if article.description %}
+                                        <a href="{{ article.href }}">
+                                            <img src="{{ article.thumb }}" alt="{{ article.name }}" title="{{ article.name }}" />
+                                        </a>
+                                    {% else %}
+                                        <a>
+                                            <img src="{{ article.thumb }}" alt="{{ article.name }}" title="{{ article.name }}" />
+                                        </a>
+                                    {% endif %}
+                                </div>
+
+                                <div class="caption">
+                                    <h4>
+                                        {% if article.description %}
+                                            <a href="{{ article.href }}">{{ article.name }}</a>
+                                        {% else %}
+                                            <a>{{ article.name }}</a>
+                                        {% endif %}
+                                    </h4>
+                                </div>
+
+                                {% if article.description %}
+                                    <div class="description">{{ article.description }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="link-to">
+                    <a href="{{ category_href }}">{{ text_all }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
