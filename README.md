@@ -2,7 +2,7 @@
 <html lang="en">
 <head></head>
 <body>
-    <h1>D.Menu Editor</h1>
+    <h1>Blog Latest Articles</h1>
     <h2>Overview</h2>
     <p>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/php->=7.3-8892bf?style=flat-square" alt="Minimum PHP Version"></a>
