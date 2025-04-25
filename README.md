@@ -34,7 +34,5 @@
     </p>
     <h2>How to install</h2>
     <p>Please read the <a href="/INSTALL.md">installation instructions</a> included in the repository or download file.</p>
-    <h2>Links</h2>
-    <p></p>
 </body>
 </html>
