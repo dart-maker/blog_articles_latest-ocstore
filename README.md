@@ -7,7 +7,8 @@
     <p>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/php->=7.3-8892bf?style=flat-square" alt="Minimum PHP Version"></a>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/release-v1.0.0-0d7fc0" alt="GitHub release"></a>
-        <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/cms-ocStore 3.x-2bbdec" alt="CMS ocStore 3.x"></a>
+        <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/cms-ocStore-2bbdec" alt="CMS ocStore"></a>
+        <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/ocStore-3.x-2bbdec" alt="CMS ocStore 3.x"></a>
     </p>
     <p>Blog Latest Articles displays the latest articles from the selected CMS ocStore blog category. The number of articles is unlimited. Optionally, you can set a title and description.</p>
     <h3>Note:</h3>
