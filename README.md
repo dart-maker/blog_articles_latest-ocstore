@@ -6,7 +6,7 @@
     <h2>Overview</h2>
     <p>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/php->=7.3-8892bf?style=flat-square" alt="Minimum PHP Version"></a>
-        <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/release-v1.0.0-0d7fc0" alt="GitHub release"></a>
+        <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/release-v1.0.1-0d7fc0" alt="GitHub release"></a>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/cms-ocStore-2bbdec" alt="CMS ocStore"></a>
         <a href="https://php.net/" rel="nofollow"><img src="https://img.shields.io/badge/ocStore-3.x-2bbdec" alt="CMS ocStore 3.x"></a>
     </p>
