@@ -53,6 +53,12 @@ class ControllerExtensionModuleDBlogArticlesLatest extends Controller {
             $data['error_quantity'] = '';
         }
 
+        $url = '';
+
+        if (isset($this->request->get['module_id'])) {
+            $url .= '&module_id=' . $this->request->get['module_id'];
+        }
+
         $data['breadcrumbs'] = array();
 
         $data['breadcrumbs'][] = array(
@@ -65,27 +71,15 @@ class ControllerExtensionModuleDBlogArticlesLatest extends Controller {
             'href' => $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true)
         );
 
-        if (!isset($this->request->get['module_id'])) {
-            $data['breadcrumbs'][] = array(
-                'text' => $this->language->get('heading_title'),
-                'href' => $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'], true)
-            );
-        } else {
-            $data['breadcrumbs'][] = array(
-                'text' => $this->language->get('heading_title'),
-                'href' => $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'] . '&module_id=' . $this->request->get['module_id'], true)
-            );
-        }
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('heading_title'),
+            'href' => $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'] . $url, true)
+        );
 
-        if (!isset($this->request->get['module_id'])) {
-            $data['action'] = $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'], true);
-        } else {
-            $data['action'] = $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'] . '&module_id=' . $this->request->get['module_id'], true);
-        }
-
+        $data['action'] = $this->url->link('extension/module/d_blog_articles_latest', 'user_token=' . $this->session->data['user_token'] . $url, true);
         $data['cancel'] = $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true);
 
-        if (isset($this->request->get['module_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
+        if (isset($this->request->get['module_id'])) {
             $module_info = $this->model_setting_module->getModule($this->request->get['module_id']);
         }
 
@@ -164,7 +158,7 @@ class ControllerExtensionModuleDBlogArticlesLatest extends Controller {
     /**
      * Validate Permission and Form.
      * 
-     * @return bool $this->error
+     * @return bool
      */
     protected function validate() {
         if (!$this->user->hasPermission('modify', 'extension/module/d_blog_articles_latest')) {

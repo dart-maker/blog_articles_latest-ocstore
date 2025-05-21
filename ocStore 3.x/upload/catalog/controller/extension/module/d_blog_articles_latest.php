@@ -12,12 +12,12 @@ class ControllerExtensionModuleDBlogArticlesLatest extends Controller {
         $this->load->language('extension/module/d_blog_articles_latest');
 
         if ($this->request->server['HTTPS']) {
-            $http_server = HTTPS_SERVER;
+            $HTTP_SERVER = HTTPS_SERVER;
         } else {
-            $http_server = HTTP_SERVER;
+            $HTTP_SERVER = HTTP_SERVER;
         }
 
-        $this->document->addStyle($http_server . 'catalog/view/javascript/module-d_blog_articles_latest/d_blog_articles_latest.css');
+        $this->document->addStyle($HTTP_SERVER . 'catalog/view/javascript/module-d_blog_articles_latest/d_blog_articles_latest.css');
 
         $this->load->model('blog/category');
         $this->load->model('blog/article');
